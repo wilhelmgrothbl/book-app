@@ -1,0 +1,20 @@
+<nav class="bg-gray-900 text-white p-6 shadow-lg px-8">
+  <div class="flex items-center justify-between">
+    <a href="#" class="font-semibold text-2xl">Kusinerna</a>
+    <div class="sm:hidden">
+      <button type="button" (click)="isMenuOpen = !isMenuOpen" class="text-white">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path *ngIf="!isMenuOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+          <path *ngIf="isMenuOpen" fill-rule="evenodd" d="M4.293 4.293a1 1 0 0 1 1.414 0L12 10.586l6.293-6.293a1 1 0 1 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 0-1.414z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="sm:flex sm:justify-end" [class.hidden]="!isMenuOpen">
+    <ul class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-4 sm:mt-0">
+      <li><a routerLink="/book-one" class="hover:text-gray-300">Alice och Aksel på stranden</a></li>
+      <li><a routerLink="/book-two" class="hover:text-gray-300">Alice och Aksel på cirkusäventyr</a></li>
+      <li><a routerLink="/book-three" class="hover:text-gray-300">Kusinernas magiska äventyr</a></li>
+    </ul>
+  </div>
+</nav>
